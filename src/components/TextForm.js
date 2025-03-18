@@ -63,16 +63,16 @@ export default function TextForm(props) {
                     <textarea className="form-control" id="myBox" style={{ backgroundColor: props.mode === 'dark' ? 'grey' : 'white',
                      color: props.mode === 'dark' ? 'white' : '#042743' }} rows="5" onChange={handelOnChange} value={text}></textarea>
                 </div>
-                <button className="btn btn-primary mx-2" onClick={handelUpClick} >convert to UpperCase</button>
-                <button className="btn btn-primary mx-2" onClick={handelLowClick}>convert to LowerCase</button>
-                <button className="btn btn-primary mx-2" onClick={handelClearClick}>clear</button>
-                <button className="btn btn-primary mx-2" onClick={handelCapClick}>Captalized</button>
-                <button className="btn btn-primary mx-2" onClick={handelCopyClick}>Copy</button>
-                <button className="btn btn-primary mx-2" onClick={handelSpaceClick}>Remove Space</button>
+                <button className="btn btn-primary mx-2 my-3" onClick={handelUpClick} >convert to UpperCase</button>
+                <button className="btn btn-primary mx-2 my-3" onClick={handelLowClick}>convert to LowerCase</button>
+                <button className="btn btn-primary mx-2 my-3" onClick={handelClearClick}>clear</button>
+                <button className="btn btn-primary mx-2 my-3" onClick={handelCapClick}>Captalized</button>
+                <button className="btn btn-primary mx-2 my-3" onClick={handelCopyClick}>Copy</button>
+                <button className="btn btn-primary mx-2 my-3" onClick={handelSpaceClick}>Remove Space</button>
             </div>
             <div className="container my-3" style={{ color: props.mode === 'dark' ? 'white' : '#042743' }}>
                 <h2>Your text summary</h2>
-                <p>{text.split(' ').filter((element) => { return element.length !== 0 }).length} words and {text.length} charcters</p>
+                <p>{text.split(' ').filter((element) => { return element.length !== 0 }).length} words and {text.length}charcters</p>
                 <p>{0.008 * text.split(' ').length} Minutes read</p>
                 <h2>Preview</h2>
                 <p>{text.length > 0 ? text : "Enter a something to preview it"}</p>
